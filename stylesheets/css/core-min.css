@@ -1,0 +1,82 @@
+.front, .back {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px; }
+
+.front, .frontContent, .back, .backContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #d73bff;
+  background-image: linear-gradient(147deg, #d73bff 0%, #FF2525 74%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px; }
+
+h1 {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 4em;
+  color: #ffeeff; }
+
+p {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+  color: #ffeeff; }
+
+.card {
+  height: 400px;
+  width: 800px;
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  transition: 1.5s; }
+  .card:hover {
+    transform: rotateX(180deg); }
+
+.front {
+  box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.8);
+  background-image: url("imgs/theRoadLessTraveled.jpg");
+  background-position: 0px 600px;
+  backface-visibility: hidden;
+  z-index: 1; }
+
+.frontContent {
+  height: 80%;
+  width: 100%;
+  padding: 30px;
+  transform: rotate(10deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.back {
+  color: #551c57;
+  box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.8);
+  background-image: url("imgs/clayPig.jpg");
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 0;
+  transform: rotateX(180deg); }
+
+.backContent {
+  height: 80%;
+  width: 100%;
+  padding: 30px;
+  transform: rotate(-15deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+#backH {
+  color: #551C57; }
+
+#heart {
+  font-size: 2em;
+  color: #ff0000; }
